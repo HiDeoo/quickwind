@@ -1,11 +1,11 @@
 ---
 import { getColorNames } from '../libs/tailwind'
 
-import PaletteColor from './PaletteColor.astro'
+import { PaletteColor } from './PaletteColor'
 
 const colorNames = getColorNames()
 ---
 
-<div class="grid grid-cols-11 gap-1">
-  {colorNames.map((colorName) => <PaletteColor name={colorName} />)}
+<div class="grid grid-cols-11 gap-1 h-full">
+  {colorNames.map((colorName) => <PaletteColor client:idle name={colorName} />)}
 </div>
