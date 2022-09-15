@@ -17,6 +17,7 @@ export function PaletteColor({ color, name, shade }: PaletteColorProps) {
   const cColor = colord(color)
   const textColor = cColor.isLight() ? cColor.darken(1) : cColor.lighten(1)
 
+  const tailwindColor = getFormattedColor('Tailwind', cColor, name, shade)
   const formattedColor = getFormattedColor($currentExportType, cColor, name, shade)
 
   async function handleClick() {
@@ -44,7 +45,8 @@ export function PaletteColor({ color, name, shade }: PaletteColorProps) {
       onClick={handleClick}
       style={{ backgroundColor: color, color: textColor.alpha(0.5).toHslString() }}
     >
-      {formattedColor}
+      <span className="sr-only">{tailwindColor}</span>
+      <span aria-hidden>{formattedColor}</span>
     </button>
   )
 }
