@@ -27,7 +27,7 @@ export function PaletteColor({ color, name, shade }: PaletteColorProps) {
 
       setTimeout(() => {
         setCopied(false)
-      }, 350)
+      }, 300)
     } catch (error) {
       console.error(error)
     }
@@ -37,9 +37,9 @@ export function PaletteColor({ color, name, shade }: PaletteColorProps) {
     <button
       className={clsx(
         'w-full h-full motion-safe:transition-transform text-[0] outline-none font-bold ease-out',
-        'hover:text-[0.625rem] hover:scale-125 hover:border-2 hover:border-stone-50 dark:hover:border-stone-900 hover:z-10',
-        'focus-visible:text-sm focus-visible:scale-125 focus-visible:border-2 focus-visible:border-stone-900 focus-visible:z-10',
-        { 'hover:scale-150': copied }
+        'xl:hover:text-[0.625rem] hover:scale-125 hover:border-2 hover:border-stone-50 dark:hover:border-stone-900 hover:z-10',
+        'xl:focus-visible:text-[0.625rem] focus-visible:scale-125 focus-visible:border-2 focus-visible:border-stone-900 focus-visible:z-10',
+        { 'hover:scale-150 focus-visible:scale-150': copied }
       )}
       onClick={handleClick}
       style={{ backgroundColor: color, color: textColor.alpha(0.5).toHslString() }}
