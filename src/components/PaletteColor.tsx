@@ -18,7 +18,7 @@ export function PaletteColor({ color, name, shade }: PaletteColorProps) {
   const formattedColor = getFormattedColor($currentExportType, cColor, name, shade)
 
   function handleClick() {
-    console.error('plop', formattedColor)
+    navigator.clipboard.writeText(formattedColor)
   }
 
   return (
