@@ -2,9 +2,10 @@
 export interface Props {
   class?: string
   highlightable?: boolean
-  href: string
-  target?: string
-  title?: string
+  href: astroHTML.JSX.AnchorHTMLAttributes['href']
+  rel?: astroHTML.JSX.AnchorHTMLAttributes['rel']
+  target?: astroHTML.JSX.AnchorHTMLAttributes['target']
+  title?: astroHTML.JSX.AnchorHTMLAttributes['title']
 }
 
 const { class: className, highlightable, href, target, title } = Astro.props
