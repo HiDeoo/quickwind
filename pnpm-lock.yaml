@@ -6,6 +6,7 @@ specifiers:
   '@hideoo/eslint-config': 0.8.0
   '@hideoo/prettier-config': 0.1.1
   '@hideoo/tsconfig': 0.1.0
+  '@nanostores/persistent': 0.7.0
   '@nanostores/preact': 0.3.0
   '@types/prettier': 2.7.0
   astro: 1.2.3
@@ -26,6 +27,7 @@ devDependencies:
   '@hideoo/eslint-config': 0.8.0_irgkl5vooow2ydyo6aokmferha
   '@hideoo/prettier-config': 0.1.1
   '@hideoo/tsconfig': 0.1.0
+  '@nanostores/persistent': 0.7.0_nanostores@0.7.0
   '@nanostores/preact': 0.3.0_mbnszl5eyv7s2hy6zmjrujl3me
   '@types/prettier': 2.7.0
   astro: 1.2.3
@@ -594,6 +596,15 @@ packages:
 
   /@ljharb/has-package-exports-patterns/0.0.2:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
+    dev: true
+
+  /@nanostores/persistent/0.7.0_nanostores@0.7.0:
+    resolution: {integrity: sha512-4PAInL/T1hbftZUJ0cmgdFHBMalUoq7BUXFBy7QfyMv/8X3LPTYNh/yxspL7+J+XM3UNvVI7IFRMMs6FBasjhQ==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      nanostores: ^0.7.0
+    dependencies:
+      nanostores: 0.7.0
     dev: true
 
   /@nanostores/preact/0.3.0_mbnszl5eyv7s2hy6zmjrujl3me:

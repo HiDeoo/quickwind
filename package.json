@@ -19,6 +19,7 @@
     "@hideoo/eslint-config": "0.8.0",
     "@hideoo/prettier-config": "0.1.1",
     "@hideoo/tsconfig": "0.1.0",
+    "@nanostores/persistent": "0.7.0",
     "@nanostores/preact": "0.3.0",
     "@types/prettier": "2.7.0",
     "astro": "1.2.3",
