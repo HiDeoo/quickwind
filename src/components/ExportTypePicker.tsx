@@ -22,7 +22,7 @@ export function ExportTypePicker({ category }: ExportTypePickerProps) {
       Export:
       <select
         className={clsx(
-          'ml-2 px-1.5 py-1 min-w-[7rem] rounded bg-stone-300/50 dark:bg-stone-700/75 outline-none',
+          'ml-3 px-1.5 py-1 min-w-[8rem] rounded bg-stone-300/50 dark:bg-stone-700/75 outline-none',
           'hover:bg-stone-300 dark:hover:bg-stone-700',
           'focus-visible:ring-2 focus-visible:ring-offset-1',
           'focus-visible:ring-indigo-500 focus-visible:ring-offset-stone-50',
