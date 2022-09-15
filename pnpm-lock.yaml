@@ -10,6 +10,7 @@ specifiers:
   '@nanostores/preact': 0.3.0
   '@types/prettier': 2.7.0
   astro: 1.2.3
+  clsx: 1.2.1
   eslint: 8.23.1
   eslint-plugin-astro: 0.19.0
   husky: 8.0.1
@@ -31,6 +32,7 @@ devDependencies:
   '@nanostores/preact': 0.3.0_mbnszl5eyv7s2hy6zmjrujl3me
   '@types/prettier': 2.7.0
   astro: 1.2.3
+  clsx: 1.2.1
   eslint: 8.23.1
   eslint-plugin-astro: 0.19.0_eslint@8.23.1
   husky: 8.0.1
@@ -1462,6 +1464,11 @@ packages:
   /clone/1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: true
 
   /color-convert/1.9.3:
