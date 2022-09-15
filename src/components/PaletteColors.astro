@@ -1,0 +1,16 @@
+---
+import { type ColorName, getColorShades } from '../libs/tailwind'
+
+import { PaletteColor } from './PaletteColor'
+
+export interface Props {
+  name: ColorName
+}
+
+const { name } = Astro.props
+
+const shades = getColorShades(name)
+---
+
+<div class="justify-self-start py-1.5 pr-5">{name.charAt(0).toUpperCase() + name.slice(1)}</div>
+{Object.entries(shades).map(([shade, color]) => <PaletteColor client:idle name={name} color={color} shade={shade} />)}
