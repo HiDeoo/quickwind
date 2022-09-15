@@ -1,4 +1,8 @@
-<header>
-  <div>HEADER</div>
-  <slot name="header-items" />
+<header class="border-b border-stone-600/75 p-3">
+  <div class="max-w-7xl mx-auto flex items-center gap-3">
+    <h1 class="text-lg font-medium border-r border-stone-600/75 pr-3">
+      <a href="/">quickwind</a>
+    </h1>
+    <slot name="header-items" />
+  </div>
 </header>

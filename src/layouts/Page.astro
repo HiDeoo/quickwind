@@ -7,11 +7,11 @@ import Header from '../components/Header.astro'
   <head>
     <Head />
   </head>
-  <body class="flex flex-col h-full">
+  <body class="flex flex-col h-full bg-stone-900 text-stone-100">
     <Header>
       <slot name="header-items" slot="header-items" />
     </Header>
-    <main id="main" class="grow">
+    <main id="main" class="grow p-3 w-full max-w-7xl mx-auto">
       <slot />
     </main>
   </body>
