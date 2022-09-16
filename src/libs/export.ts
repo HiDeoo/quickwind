@@ -1,8 +1,10 @@
 import { type Colord } from 'colord'
 
+import { type SpacingSizes } from './tailwind'
+
 const EXPORTS = {
   colors: ['Tailwind', 'Hexadecimal', 'RGB colors', 'HSL colors'],
-  spacing: ['Tailwind', 'rem'],
+  spacing: ['Tailwind', 'rem', 'px'],
 } as const
 
 export function getExportTypes<TCategory extends ExportCategory>(category: TCategory): typeof EXPORTS[TCategory] {
@@ -21,6 +23,20 @@ export function getFormattedColor(format: ExportType<'colors'>, color: Colord, n
     }
     default: {
       return `${name}-${shade}`
+    }
+  }
+}
+
+export function getFormattedSize(format: ExportType<'spacing'>, sizes: SpacingSizes): string {
+  switch (format) {
+    case 'rem': {
+      return sizes.rem
+    }
+    case 'px': {
+      return sizes.px
+    }
+    default: {
+      return sizes.tailwind
     }
   }
 }

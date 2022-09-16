@@ -1,0 +1,20 @@
+---
+import { getSpacingNames } from '../libs/tailwind'
+
+import { Spacing } from './Spacing'
+
+const spacingNames = getSpacingNames()
+---
+
+<div class="grid grid-cols-[auto_1fr] gap-0.5 h-full pb-1 items-center overflow-x-hidden">
+  {
+    spacingNames.map((spacingName) => (
+      <>
+        <div class="py-1.5 pr-2 xs:pr-3 sm:pr-5" aria-hidden="true">
+          {spacingName}
+        </div>
+        <Spacing client:idle name={spacingName} />
+      </>
+    ))
+  }
+</div>
