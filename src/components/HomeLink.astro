@@ -1,0 +1,21 @@
+---
+import Link from './Link.astro'
+
+export interface Props {
+  class?: string
+  href: string
+  name: string
+}
+
+const { class: className, href, name } = Astro.props
+---
+
+<Link
+  href={href}
+  class="flex flex-col items-center px-3 py-3 bg-stone-300/30 dark:bg-stone-800 hover:bg-stone-300/50 hover:dark:bg-stone-800/75"
+>
+  <div aria-hidden="true" class:list={['grid my-3 h-44 w-44 gap-px', className]}>
+    <slot />
+  </div>
+  <div class="text-lg font-medium mb-1.5">{name}</div>
+</Link>

@@ -1,0 +1,41 @@
+---
+import HomeLink from '../components/HomeLink.astro'
+import Page from '../layouts/Page.astro'
+import { getColorNames, getColorShades, getSpacingNames, getSpacingSizes } from '../libs/tailwind'
+
+const colorNames = getColorNames()
+const spacingNames = getSpacingNames()
+---
+
+<Page class="grid place-items-center h-full">
+  <div class="flex flex-col md:flex-row gap-3 md:gap-8 pb-3">
+    <HomeLink href="/colors" name="Colors" class="grid-cols-[repeat(10,_1fr)]">
+      {
+        colorNames.map((colorName) => {
+          const shades = getColorShades(colorName)
+
+          return (
+            <>
+              {Object.values(shades).map((color) => {
+                return <div style={{ backgroundColor: color }} />
+              })}
+            </>
+          )
+        })
+      }
+    </HomeLink>
+    <HomeLink href="/spacing" name="Spacing">
+      {
+        spacingNames.slice(0, 26).map((spacingName) => {
+          const sizes = getSpacingSizes(spacingName)
+
+          return (
+            <div class="bg-stone-400/25 dark:bg-stone-700/25">
+              <div class="h-full bg-indigo-400 dark:bg-indigo-300" style={{ width: sizes.px }} />
+            </div>
+          )
+        })
+      }
+    </HomeLink>
+  </div>
+</Page>

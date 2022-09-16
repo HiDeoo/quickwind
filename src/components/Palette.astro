@@ -1,0 +1,19 @@
+---
+import { getColorNames } from '../libs/tailwind'
+
+import PaletteColors from './PaletteColors.astro'
+import PaletteShades from './PaletteShades.astro'
+
+const colorNames = getColorNames()
+---
+
+<div
+  class:list={[
+    'grid grid-cols-[auto_repeat(10,_1fr)] gap-0.5 h-full pb-1',
+    'grid-rows-[auto_repeat(21,minmax(2.5rem,_1fr))] xs:grid-rows-[auto_repeat(22,minmax(2.5rem,_1fr))]',
+    'items-center justify-items-center',
+  ]}
+>
+  <PaletteShades />
+  {colorNames.map((colorName) => <PaletteColors name={colorName} />)}
+</div>

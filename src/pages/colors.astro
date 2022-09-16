@@ -1,0 +1,10 @@
+---
+import { ExportTypePicker } from '../components/ExportTypePicker'
+import Palette from '../components/Palette.astro'
+import Page from '../layouts/Page.astro'
+---
+
+<Page title="Colors">
+  <ExportTypePicker client:idle slot="header-items" category="colors" />
+  <Palette />
+</Page>
