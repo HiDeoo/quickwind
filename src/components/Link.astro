@@ -12,7 +12,7 @@ const { class: className, highlightable, href, target, title } = Astro.props
 
 const pathname = new URL(Astro.request.url).pathname
 
-const selected = highlightable && pathname === href
+const selected = highlightable && new RegExp(`^${href}/?$`).test(pathname)
 ---
 
 <a
