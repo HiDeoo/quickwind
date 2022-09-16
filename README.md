@@ -1,9 +1,12 @@
 <div align="center">
-  <h1>quickwind 🚧</h1>
-  <p>quickwind description</p>
+  <h1>Quickwind 🎨</h1>
+  <p>Quickly preview and export Tailwind CSS colors and spacing scale.</p>
   <p>
-    <a href="https://dummyimage.com/520x350/121212/cdc8be.png&text=screenshot" title="Screenshot of quickwind">
-      <img alt="Screenshot of quickwind" src="https://dummyimage.com/520x350/121212/cdc8be.png&text=screenshot" width="520" />
+    <a href="https://user-images.githubusercontent.com/494699/190704849-02130b9d-5f9f-4320-951e-657174d28b1b.png" title="Screenshot of Quickwind colors">
+      <img alt="Screenshot of Quickwind colors" src="https://user-images.githubusercontent.com/494699/190704849-02130b9d-5f9f-4320-951e-657174d28b1b.png" width="320" />
+    </a>
+    <a href="https://user-images.githubusercontent.com/494699/190704891-3d294789-711f-4245-8e1e-6beae428897f.png" title="Screenshot of Quickwind spacing">
+      <img alt="Screenshot of Quickwind spacing" src="https://user-images.githubusercontent.com/494699/190704891-3d294789-711f-4245-8e1e-6beae428897f.png" width="320" />
     </a>
   </p>
 </div>
@@ -20,10 +23,13 @@
 
 ## Features
 
-quickwind presentation.
+[Tailwind CSS](https://tailwindcss.com) is an awesome framework that I like to use for prototyping, personal projects and projects that don't have a design system. They provide [an amazing documentation](https://tailwindcss.com/docs) but I often find myself looking for a specific color or spacing value and navigating through the documentation to find it.
 
-- quickwind feature 1
-- quickwind feature 2
+Quickwind is a very basic solution to quickly preview and export Tailwind CSS colors and spacing scale:
+
+- Quickly preview the entire Tailwind CSS colors and spacing scale.
+- Export colors to the clipboard in various formats (Tailwind, Hexadecimal, RGB & HSL).
+- Export spacing to the clipboard in various formats (Tailwind, rem & px).
 
 ## License
 
