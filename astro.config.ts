@@ -4,6 +4,5 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   integrations: [preact(), tailwind()],
-  // TODO
-  site: 'http://localhost:3000',
+  site: 'https://quickwind.vercel.app',
 })
