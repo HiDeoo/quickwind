@@ -1,10 +1,16 @@
 ---
-const description = '// TODO'
+export interface Props {
+  title?: string | undefined
+}
+
+const { title: pageTitle } = Astro.props
+
+const description = 'Quickly preview and export Tailwind CSS colors and spacing scale.'
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 const ogImageAlt = '// TODO'
 // TODO(HiDeoo)
 const ogImageUrl = new URL('/images/og.png', Astro.site)
-const title = '// TODO'
+const title = pageTitle && pageTitle.length > 0 ? `${pageTitle} - Quickwind` : 'Quickwind'
 ---
 
 <meta charset="utf-8" />
