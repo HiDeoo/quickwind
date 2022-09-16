@@ -1,6 +1,12 @@
 ---
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
+
+export interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
 ---
 
 <html lang="en" class="h-full">
@@ -11,7 +17,7 @@ import Header from '../components/Header.astro'
     <Header>
       <slot name="header-items" slot="header-items" />
     </Header>
-    <main id="main" class="grow p-3 w-full max-w-7xl mx-auto">
+    <main id="main" class:list={['grow p-3 w-full max-w-7xl mx-auto', className]}>
       <slot />
     </main>
   </body>
