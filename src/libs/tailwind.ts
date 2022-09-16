@@ -1,5 +1,5 @@
 import colors from 'tailwindcss/colors'
-import { theme } from 'tailwindcss/defaultConfig'
+import defaultConfig from 'tailwindcss/defaultConfig'
 
 export function getColorNames(): ColorName[] {
   const validColors: ColorName[] = []
@@ -18,11 +18,11 @@ export function getColorShades(name: ColorName) {
 }
 
 export function getSpacingNames() {
-  if (!theme?.spacing) {
+  if (!defaultConfig.theme?.spacing) {
     throw new Error('Theme spacing are not defined.')
   }
 
-  const names = Object.keys(theme.spacing)
+  const names = Object.keys(defaultConfig.theme.spacing)
     .filter((name) => !/[A-Za-z]/.test(name))
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
 
@@ -33,11 +33,11 @@ export function getSpacingNames() {
 }
 
 export function getSpacingSizes(name: string): SpacingSizes {
-  if (typeof theme?.spacing === 'function') {
+  if (typeof defaultConfig.theme?.spacing === 'function') {
     throw new TypeError('Theme spacing is a function, expected an object.')
   }
 
-  const rem = theme?.spacing?.[name]
+  const rem = defaultConfig.theme?.spacing?.[name]
 
   if (!rem) {
     throw new Error(`Spacing size '${name}' is not defined.`)
