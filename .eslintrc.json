@@ -13,7 +13,7 @@
       },
       "rules": {
         "react/jsx-key": "off",
-        "react/no-unknown-property": ["error", { "ignore": ["class"] }],
+        "react/no-unknown-property": ["error", { "ignore": ["class", "class:list"] }],
         "unicorn/text-encoding-identifier-case": "off"
       }
     },
