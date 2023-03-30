@@ -57,13 +57,13 @@ export function getSpacingSizes(name: string): SpacingSizes {
 }
 
 function isValidColorName(name: string, value: unknown): name is ColorName {
-  return typeof value === 'object' && typeof Object.getOwnPropertyDescriptor(colors, name)?.get === 'undefined'
+  return typeof value === 'object' && Object.getOwnPropertyDescriptor(colors, name)?.get === undefined
 }
 
 export type ColorName = {
   [TKey in keyof typeof colors]: TKey extends DeprecatedColorNames
     ? never
-    : typeof colors[TKey] extends string
+    : (typeof colors)[TKey] extends string
     ? never
     : TKey
 }[keyof typeof colors]

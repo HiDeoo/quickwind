@@ -7,14 +7,15 @@ const EXPORTS = {
   spacing: ['Tailwind', 'rem', 'px'],
 } as const
 
-export function getExportTypes<TCategory extends ExportCategory>(category: TCategory): typeof EXPORTS[TCategory] {
+export function getExportTypes<TCategory extends ExportCategory>(category: TCategory): (typeof EXPORTS)[TCategory] {
   return EXPORTS[category]
 }
 
 export function getFormattedColor(format: ExportType<'colors'>, color: Colord, name: string, shade: string): string {
   switch (format) {
-    case 'Hexadecimal':
+    case 'Hexadecimal': {
       return color.toHex()
+    }
     case 'RGB colors': {
       return color.toRgbString().replaceAll(',', '')
     }
@@ -42,4 +43,4 @@ export function getFormattedSize(format: ExportType<'spacing'>, sizes: SpacingSi
 }
 
 export type ExportCategory = keyof typeof EXPORTS
-export type ExportType<TCategory extends ExportCategory> = typeof EXPORTS[TCategory][number]
+export type ExportType<TCategory extends ExportCategory> = (typeof EXPORTS)[TCategory][number]

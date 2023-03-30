@@ -14,7 +14,7 @@ export function ExportTypePicker({ category }: ExportTypePickerProps) {
       return
     }
 
-    currentExportTypes.setKey(category, event.target.value as typeof exportTypes[number])
+    currentExportTypes.setKey(category, event.target.value as (typeof exportTypes)[number])
   }
 
   return (
